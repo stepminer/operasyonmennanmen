@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Propos - OPÉRATION MEN NAN MEN</title>
+    <title>À Propos - OPERASYION MEN NAN MEN</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="mennanmen_logo_TEXT.png">
 </head>
@@ -14,14 +14,17 @@
         <img src="LOGO MNM V0.jpg" alt="Logo OPÉRATION MEN NAN MEN">
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À Propos</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="get-involved.html">S'engager</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index-fr.html">Accueil</a></li>
+                <li><a href="about-fr.html">À Propos</a></li>
+                <li><a href="services-fr.html">Services</a></li>
+                <li><a href="get_involved-fr.html">S'engager</a></li>
+                <li><a href="contact-fr.html">Contact</a></li>
             </ul>
         </nav>
-  
+ <select id="languageSwitcher">
+            <option value="fr" selected>Francais</option>
+            <option value="ht">Kreol</option>
+        </select>
     </header>
 
      <header>
@@ -61,7 +64,7 @@
             <li>Mise en place d’activités éducatives et récréatives pour les enfants.</li>
             <li>Garantie d’un repas quotidien pour répondre aux besoins nutritionnels essentiels.</li>
             <li>Gestion participative par les jeunes et les volontaires locaux.</li>
-<li>Cette initiative libère les parents pour leurs activités tout en soutenant les enfants et renforçant l’engagement communautaire.</li>      
+<li>Cette initiative libère les parents pour leurs activités tout en soutenant les enfants et renforçant l’engagement communautaire.</li>
         </ul>
 
         <h3>4. Partenariats pour une Relocalisation Durable</h3>
@@ -103,7 +106,16 @@
     <footer>
         <p>&copy; 2024 OPÉRATION MEN NAN MEN | <a href="https://operasyonmennanmen.org">operasyonmennanmen.org</a></p>
     </footer>
-
+   <!-- Language Switcher Script -->
+    <script>
+        document.getElementById('languageSwitcher').addEventListener('change', function () {
+            const language = this.value;
+            const currentPage = window.location.pathname.split('/').pop();
+            const baseName = currentPage.includes('-') ? currentPage.split('-')[0] : currentPage.split('.')[0];
+            const newPage = `${baseName}-${language}.html`;
+            window.location.href = newPage;
+        });
+    </script>
 </body>
 
 </html>
