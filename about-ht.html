@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html lang="ht">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsènan - OPERASYON MEN NAN MEN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="mennanmen_logo_TEXT.png">
+</head>
+
+<body>
+    <header>
+        <img src="LOGO MNM V0.jpg" alt="Logo OPERASYON MEN NAN MEN">
+        <nav>
+            <ul>
+                <li><a href="index-ht.html">Akèy</a></li>
+                <li><a href="about-ht.html">Konsènan</a></li>
+                <li><a href="services-ht.html">Sèvis</a></li>
+                <li><a href="get_involved-ht.html">Angaje w</a></li>
+                <li><a href="contact-ht.html">Kontak</a></li>
+            </ul>
+        </nav>
+<header>
+  <!-- Other header content like logo and navigation menu -->
+   <select id="languageSwitcher">
+            <option value="fr">Francais</option>
+            <option value="ht" selected>Kreol</option>
+        </select>
+</header>
+
+    </header>
+
+    <section>
+        <h2>Konsènan Nou</h2>
+        <p>OPERASYON MEN NAN MEN konsantre sou relokalizasyon moun ki deplase andedan peyi (MDAP) ann Ayiti avèk yon apwòch kolaboratif ak dirab.</p>
+    </section>
+
+    <section>
+        <h3>Misyon Nou</h3>
+        <p>Nou travay pou ofri solisyon lojman ki diy, ankouraje lapè sosyal, epi pwomouvwa devlopman kominotè ann Ayiti.</p> 
+        <p>Operasyon Men Nan Men pozisyone tèt li kòm yon aktè kle nan relokalizasyon volontè moun ki deplase andedan peyi (MDAP) ann Ayiti, gras ak yon ekspètiz ki pwouve nan jere sitiyasyon apre katastwòf. Fondatè li yo, tankou Mesye Raymond Lerebours, mete aksan sou yon apwòch holistik ak kolaboratif. Angajman li ak òganizasyon entènasyonal tankou CRS ak CICR, ansanm ak enskripsyon li nan OCHA, se prèv kredibilite ak enpak li.
+Operasyon Men Nan Men baze sou yon eritaj rich nan aksyon, tankou kowòdinasyon kan deplase tankou Carradeux ak Saint-Louis, katografik inisyal MDAP ke gouvènman ayisyen an itilize, epi mete an pratik solisyon inovatif pou amelyore kondisyon lavi. Avèk eksperyans sa a, òganizasyon an angaje l jodi a pou vin yon lidè nan tranzisyon MDAP yo nan lojman ki diy ak dirab, pandan l ap ankouraje lapè sosyal ak devlopman kominotè.
+Inisyativ sa a vize transfòme defi yo an opòtinite pou rezilyans, avèk yon apwòch ki baze sou patenarya, inovasyon sosyal, ak pwomosyon solisyon dirab adapte ak kontèks ayisyen an.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 OPERASYON MEN NAN MEN | <a href="https://operasyonmennanmen.org">operasyonmennanmen.org</a></p>
+    </footer>
+<!-- Language Switcher Script -->
+    <script>
+        document.getElementById('languageSwitcher').addEventListener('change', function () {
+            const language = this.value;
+            const currentPage = window.location.pathname.split('/').pop();
+            const baseName = currentPage.includes('-') ? currentPage.split('-')[0] : currentPage.split('.')[0];
+            const newPage = `${baseName}-${language}.html`;
+            window.location.href = newPage;
+        });
+    </script>
+</body>
+
+</html>

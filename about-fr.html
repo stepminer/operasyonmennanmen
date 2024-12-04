@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - OPERASYION MEN NAN MEN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="mennanmen_logo_TEXT.png">
+</head>
+
+<body>
+    <header>
+        <img src="LOGO MNM V0.jpg" alt="Logo OPÉRATION MEN NAN MEN">
+        <nav>
+            <ul>
+                <li><a href="index-fr.html">Accueil</a></li>
+                <li><a href="about-fr.html">À Propos</a></li>
+                <li><a href="services-fr.html">Services</a></li>
+                <li><a href="get_involved-fr.html">S'engager</a></li>
+                <li><a href="contact-fr.html">Contact</a></li>
+            </ul>
+        </nav>
+ <select id="languageSwitcher">
+            <option value="fr" selected>Francais</option>
+            <option value="ht">Kreol</option>
+        </select>
+    </header>
+
+     <header>
+        <h1>Operasyon Men Nan Men</h1>
+        <p>Soutenir les communautés, bâtir l’autonomie</p>
+    </header>
+
+    <section>
+        <h2>Vision</h2>
+        <p>Aider les communautés à devenir autonomes grâce à une approche participative axée sur la solidarité, le leadership local et des solutions durables.</p>
+    </section>
+
+    <section>
+        <h2>Une Approche Collaboratrice et Transformante</h2>
+        <p>"Operasyon Men Nan Men" n’est pas un programme d’assistance classique. C’est une méthodologie qui valorise l’entraide, responsabilise les communautés et catalyse leur transformation à partir de leurs propres ressources et talents.</p>
+    </section>
+
+    <section>
+        <h2>Phases d’Intervention</h2>
+
+        <h3>1. Identification des Leaders Locaux</h3>
+        <ul>
+            <li>Organisation de rencontres pour identifier les personnes influentes.</li>
+            <li>Formation sur les principes de leadership et la méthodologie "Operasyon Men Nan Men".</li>
+            <li>Encouragement de la participation égale des jeunes, des femmes et des hommes.</li>
+        </ul>
+
+        <h3>2. Compréhension des Besoins Communautaires</h3>
+        <ul>
+            <li>Recueil d’informations par des dialogues ouverts avec les membres de la communauté.</li>
+            <li>Analyse des besoins essentiels (nourriture, logement, éducation, sécurité) et des ressources existantes.</li>
+            <li>Établissement d’un diagnostic communautaire précis.</li>
+        </ul>
+
+        <h3>3. Création des Camps "Boujon Lavi"</h3>
+        <ul>
+            <li>Mise en place d’activités éducatives et récréatives pour les enfants.</li>
+            <li>Garantie d’un repas quotidien pour répondre aux besoins nutritionnels essentiels.</li>
+            <li>Gestion participative par les jeunes et les volontaires locaux.</li>
+<li>Cette initiative libère les parents pour leurs activités tout en soutenant les enfants et renforçant l’engagement communautaire.</li>
+        </ul>
+
+        <h3>4. Partenariats pour une Relocalisation Durable</h3>
+        <ul>
+            <li>Avec les autorités locales : Accès aux terres, soutien administratif et ressources stratégiques.</li>
+            <li>Avec les ONG et organisations internationales : Solutions pour la relocalisation et le développement communautaire.</li>
+            <li>Avec le secteur privé : Création d’emplois, microcrédits et formations professionnelles.</li>
+            <li>Avec la communauté : Renforcement de la gouvernance locale pour une gestion autonome des ressources.</li>
+        </ul>
+
+        <h3>5. Suivi et Évaluation Continue</h3>
+        <ul>
+            <li>Évaluation régulière des progrès sur le terrain.</li>
+            <li>Récolte de retours de la communauté pour améliorer les actions.</li>
+            <li>Ajustements continus basés sur une approche participative.</li>
+        </ul>
+    </section>
+
+    <section class="principles">
+        <h2>Nos Principes Fondamentaux</h2>
+        <ul>
+            <li><strong>Facilitation, pas charité :</strong> Nous aidons les communautés à devenir autonomes, plutôt que de leur fournir des solutions toutes faites.</li>
+            <li><strong>Leadership local :</strong> Les solutions doivent émerger des communautés elles-mêmes.</li>
+            <li><strong>Solidarité durable :</strong> Tout impact doit contribuer à une indépendance à long terme.</li>
+        </ul>
+    </section>
+
+    <section class="outcome">
+        <h2>Un Résultat qui Fait la Différence</h2>
+        <p>Avec "Operasyon Men Nan Men", chaque communauté devient une force capable de :</p>
+        <ul>
+            <li>Gérer ses propres ressources.</li>
+            <li>Prendre des décisions collectives et inclusives.</li>
+            <li>Reconstruire sa vie avec dignité, fierté et résilience.</li>
+        </ul>
+        <p>Rejoignez-nous dans cette mission pour bâtir des communautés autonomes et solidaires.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 OPÉRATION MEN NAN MEN | <a href="https://operasyonmennanmen.org">operasyonmennanmen.org</a></p>
+    </footer>
+   <!-- Language Switcher Script -->
+    <script>
+        document.getElementById('languageSwitcher').addEventListener('change', function () {
+            const language = this.value;
+            const currentPage = window.location.pathname.split('/').pop();
+            const baseName = currentPage.includes('-') ? currentPage.split('-')[0] : currentPage.split('.')[0];
+            const newPage = `${baseName}-${language}.html`;
+            window.location.href = newPage;
+        });
+    </script>
+</body>
+
+</html>

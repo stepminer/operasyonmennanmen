@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S'engager - OPÉRATION MEN NAN MEN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="LOGO MNM V0.jpg">
+</head>
+
+<body>
+    <header>
+        <img src="LOGO MNM V0.jpg" alt="Logo OPÉRATION MEN NAN MEN">
+        <nav>
+            <ul>
+                <li><a href="index-fr.html">Accueil</a></li>
+                <li><a href="about-fr.html">À Propos</a></li>
+                <li><a href="services-fr.html">Services</a></li>
+                <li><a href="get_involved-fr.html">S'engager</a></li>
+                <li><a href="contact-fr.html">Contact</a></li>
+            </ul>
+        </nav>
+<header>
+  <select id="languageSwitcher">
+            <option value="fr" selected>Francais</option>
+            <option value="ht">Kreol</option>
+        </select>
+</header>
+
+    </header>
+
+    <section>
+        <h2>S'engager</h2>
+        <p>Découvrez comment vous pouvez participer à notre mission de transformer les vies des personnes déplacées internes.</p>
+    </section>
+
+    <section>
+        <h3>Opportunités de Bénévolat</h3>
+        <p>Joignez-vous à notre équipe pour avoir un impact direct sur la vie des PDI.</p>
+    </section>
+
+    <section>
+        <h3>Faire un Don</h3>
+        <p>Votre soutien financier permet de fournir des logements, des emplois, et des opportunités éducatives.</p>
+        <a href="donate.html">Faire un Don</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 OPÉRATION MEN NAN MEN | <a href="https://operationmennanmen.org">operationmennanmen.org</a></p>
+    </footer>
+<!-- Include in the head or just before the closing body tag -->
+   <script>
+    document.getElementById('languageSwitcher').addEventListener('change', function () {
+        const language = this.value; // Get selected language
+        const currentPage = window.location.pathname.split('/').pop(); // Get current page name
+
+        // If the current page name does not match the pattern, handle fallback
+        const baseName = currentPage.includes('-') ? currentPage.split('-')[0] : currentPage.split('.')[0];
+
+        // Construct the new page URL with the selected language
+        const newPage = `${baseName}-${language}.html`;
+
+        // Redirect to the new page
+        window.location.href = newPage;
+    });
+</script>
+
+</body>
+
+</html>
