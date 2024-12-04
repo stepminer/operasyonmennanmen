@@ -14,13 +14,18 @@
         <img src="LOGO MNM V0.jpg" alt="Logo OPÉRATION MEN NAN MEN">
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À Propos</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="get-involved.html">S'engager</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index-fr.html">Accueil</a></li>
+                <li><a href="about-fr.html">À Propos</a></li>
+                <li><a href="services-fr.html">Services</a></li>
+                <li><a href="get_involved-fr.html">S'engager</a></li>
+                <li><a href="contact-fr.html">Contact</a></li>
             </ul>
         </nav>
+  <!-- Other header content like logo and navigation menu -->
+ <select id="languageSwitcher">
+            <option value="fr" selected>Francais</option>
+            <option value="ht">Kreol</option>
+        </select>
     </header>
 
     <section>
@@ -50,6 +55,22 @@
     <footer>
         <p>&copy; 2024 OPÉRATION MEN NAN MEN | <a href="https://operasyonmennanmen.org">operasyonmennanmen.org</a></p>
     </footer>
+<!-- Include in the head or just before the closing body tag -->
+   <script>
+    document.getElementById('languageSwitcher').addEventListener('change', function () {
+        const language = this.value; // Get selected language
+        const currentPage = window.location.pathname.split('/').pop(); // Get current page name
+
+        // If the current page name does not match the pattern, handle fallback
+        const baseName = currentPage.includes('-') ? currentPage.split('-')[0] : currentPage.split('.')[0];
+
+        // Construct the new page URL with the selected language
+        const newPage = `${baseName}-${language}.html`;
+
+        // Redirect to the new page
+        window.location.href = newPage;
+    });
+</script>
 </body>
 
 </html>
