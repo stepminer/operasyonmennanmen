@@ -292,20 +292,17 @@ Cette initiative vise à transformer les défis en opportunités de résilience,
         <p>&copy; 2024 OPÉRATION MEN NAN MEN | <a href="https://operasyonmennanmen.org">operasyonmennanmen.org</a></p>
     </footer>    <!-- Language Switcher Script -->
     <script>
-    document.getElementById('languageSwitcher').addEventListener('change', function () {
-        const language = this.value; // Get selected language
-        const currentPage = window.location.pathname.split('/').pop(); // Get current page name
+        document.getElementById('languageSwitcher').addEventListener('change', function () {
+            const selectedLanguage = this.value;
 
-        // If the current page name does not match the pattern, handle fallback
-        const baseName = currentPage.includes('-') ? currentPage.split('-')[0] : currentPage.split('.')[0];
-
-        // Construct the new page URL with the selected language
-        const newPage = `${baseName}-${language}.html`;
-
-        // Redirect to the new page
-        window.location.href = newPage;
-    });
-</script>
+            // Redirect to index-ht.html if Kreyòl is selected, else stay on index.html
+            if (selectedLanguage === 'ht') {
+                window.location.href = 'index-ht.html';
+            } else if (selectedLanguage === 'fr') {
+                window.location.href = 'index-fr.html';
+            }
+        });
+    </script>
 
 </body>
 
