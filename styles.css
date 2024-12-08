@@ -1,18 +1,3 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and Background */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #fdfaf3; /* Light gold background for warmth */
-    color: #333;
-}
-
 /* Header Styles */
 header {
     background-color: #1a3e5e; /* Deep blue for trust and reliability */
@@ -21,7 +6,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 header img {
@@ -33,190 +18,44 @@ header nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
-    flex-wrap: wrap;
-    margin: 10px 0 0;
+    flex-wrap: wrap; /* Wrap navigation items on smaller screens */
+    justify-content: center; /* Center items for a balanced layout */
+    margin-top: 10px; /* Add spacing between logo and menu */
+}
+
+header nav ul li {
+    display: block;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 10px 15px; /* Add padding for better touch usability */
+    border-radius: 5px; /* Optional: Rounded corners */
+    transition: background-color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #f1c40f; /* Add contrast on hover */
+    background-color: #f1c40f; /* Highlight on hover */
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: url('banner2.jpg') center/cover no-repeat;
-    color: #fff;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-}
-
-.hero .button {
-    background-color: #f1c40f;
-    color: #333;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.hero .button:hover {
-    background-color: #d4a407;
-    transform: scale(1.05); /* Subtle button hover effect */
-}
-
-/* Section Styles */
-section {
-    padding: 40px 10%;
-    text-align: center;
-}
-
-section h2 {
-    color: #1a3e5e;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-section p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-/* Form Styles */
-form {
-    max-width: 600px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form button {
-    background-color: #1a3e5e;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-form button:hover {
-    background-color: #16324b;
-    transform: scale(1.05); /* Add a slight pop effect on hover */
-}
-
-/* Footer Styles */
-footer {
-    background-color: #1a3e5e;
-    color: #fff;
-    text-align: center;
-    padding: 15px 20px;
-    margin-top: 20px;
-}
-
-footer a {
-    color: #f1c40f;
-    text-decoration: none;
-    transition: text-decoration 0.3s ease;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Cards Layout */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.card {
-    width: 300px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Design */
+/* Responsive Navigation for Mobile Devices */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the left */
     }
 
     header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        width: 100%; /* Take full width */
+        justify-content: space-between; /* Spread buttons across the width */
+        gap: 10px; /* Adjust gap for smaller screens */
     }
 
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
-    }
-
-    form {
-        width: 90%;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
+    header nav ul li a {
+        padding: 15px 10px; /* Larger touch area for mobile */
+        text-align: center; /* Center-align text */
+        width: 100%; /* Full-width buttons for better readability */
     }
 }
